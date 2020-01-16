@@ -1,28 +1,30 @@
-<!DOCTYPE html>
-<html>
-<title>Print form</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<body>
-    <form method="post" action="" id="myfrm">
-        <fieldset>
-            <legend>Personal information:</legend>
-            First name:<br>
-            <input type="text" name="firstname">
-            <br> Last name:<br>
-            <input type="text" name="lastname">
-            <br><br>
-            <input type="submit" value="Submit">
-        </fieldset>
-    </form>
-    <p align="center"><input type="button" onclick="myPrint('myfrm')" value="print"></p>
-    <script>
-        function myPrint(myfrm) {
-            var printdata = document.getElementById(myfrm);
-            newwin = window.open("");
-            newwin.document.write(printdata.outerHTML);
-            newwin.print();
-            newwin.close();
-        }
-    </script>
-</body>
-</html>
+<HTML>
+<HEAD>
+<TITLE>Test Input </TITLE>
+   
+<script type="text/javascript">
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
+      heap.load("1951090059");
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">   
+function readText (form) {
+    TestVar =form.input1.value;
+    alert ("You typed: " + TestVar);
+}
+function writeText (form) {
+    form.input1.value = "Have a nice day!"
+}
+</SCRIPT>    
+</HEAD>
+<BODY>
+<FORM NAME="myform" ACTION="" METHOD="GET">
+What is your favorite color? <BR>
+<INPUT TYPE="text" NAME="input1" VALUE=""><P>
+What is your name? <BR>
+<INPUT TYPE="text" NAME="input2" VALUE=""><P>
+<INPUT TYPE="button" NAME="button1" Value="Read" onClick="readText(this.form)">
+<INPUT TYPE="button" NAME="button2" Value="Write" onClick="writeText(this.form)">
+</FORM>
+</BODY>
+</HTML>
