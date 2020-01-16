@@ -8,13 +8,13 @@
 </script>
 
 <SCRIPT LANGUAGE="JavaScript">   
-function readFirst (form) {
-    FN =form.input1.value;
-    alert ("You typed: " + FN);
+function readColor (form) {
+    ColorVAR =form.input1.value;
+    alert ("You favorite color is: " + ColorVAR);
 }
-function readLast (form) {
-    LN =form.input2.value;
-    alert ("You typed: " + LN);
+function readName (form) {
+    NameVar =form.input2.value;
+    alert ("You typed: " + NameVar);
 }
 </SCRIPT>    
 </HEAD>
@@ -24,8 +24,8 @@ What is your favorite color? <BR>
 <INPUT TYPE="text" NAME="input1" VALUE=""><P>
 What is your name? <BR>
 <INPUT TYPE="text" NAME="input2" VALUE=""><P>
-<INPUT TYPE="button" NAME="button1" Value="First" onClick="readFirst(this.form)">
-<INPUT TYPE="button" NAME="button2" Value="Last" onClick="readLast(this.form)">
+<INPUT TYPE="button" NAME="button1" Value="Color" onClick="readColor(this.form)">
+<INPUT TYPE="button" NAME="button2" Value="Name" onClick="readName(this.form)">
 </FORM>
 </BODY>
 </HTML>
